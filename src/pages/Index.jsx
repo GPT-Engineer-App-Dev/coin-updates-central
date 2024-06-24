@@ -3,7 +3,7 @@ import { Box, Container, Flex, Heading, Text, VStack, HStack, Link, Image, Grid,
 import { FaSearch, FaUser } from 'react-icons/fa';
 
 const Header = () => (
-  <Box as="header" bg="gray.100" py={4}>
+  <Box as="header" bg="ftBackground" py={4}>
     <Container maxW="container.xl">
       <Flex justify="space-between" align="center">
         <Heading as="h1" fontSize="2xl" color="blue.900">Financial Times</Heading>
@@ -22,7 +22,7 @@ const Header = () => (
 );
 
 const ArticlePreview = ({ title, excerpt }) => (
-  <Box borderBottom="1px" borderColor="gray.200" py={4}>
+  <Box borderBottom="1px" borderColor="gray.200" py={4} bg="white" p={4}>
     <Heading as="h3" fontSize="xl" mb={2}>{title}</Heading>
     <Text>{excerpt}</Text>
   </Box>
@@ -71,7 +71,7 @@ const Footer = () => (
 
 const Index = () => {
   return (
-    <Box>
+    <Box bg="ftBackground">
       <Header />
       <Container maxW="container.xl" py={8}>
         <Grid templateColumns="repeat(3, 1fr)" gap={8}>
@@ -92,7 +92,7 @@ const Index = () => {
             </VStack>
           </GridItem>
           <GridItem>
-            <Box bg="gray.100" p={4} borderRadius="md">
+            <Box bg="white" p={4} borderRadius="md">
               <Heading as="h2" fontSize="xl" mb={4}>Market Overview</Heading>
               <VStack align="stretch" spacing={2}>
                 <HStack justify="space-between">
